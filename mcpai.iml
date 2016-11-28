@@ -22,7 +22,6 @@
     </orderEntry>
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.0" level="project" />
     <orderEntry type="library" name="com.jfoenix:jfoenix:1.0.0" level="project" />
-    <orderEntry type="library" name="de.jensd:fontawesomefx:8.9" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -77,6 +76,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="de.jensd:fontawesomefx:8.9" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -86,15 +86,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/datafx-8.0b8.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="jar://$MODULE_DIR$/lib/datafx-8.0b8.jar!/" recursive="false" />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="io.datafx:datafx:8.0.7" level="project" />
   </component>
 </module>
