@@ -22,6 +22,7 @@
     </orderEntry>
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.0" level="project" />
     <orderEntry type="library" name="com.jfoenix:jfoenix:1.0.0" level="project" />
+    <orderEntry type="library" name="io.datafx:flow:8.0.7" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
