@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 
 public class MainDemo extends Application {
 
-	@FXMLViewFlowContext private ViewFlowContext flowContext;
+	@FXMLViewFlowContext private static final ViewFlowContext flowContext = new ViewFlowContext();
 
 	public static void main(String[] args) {
 		launch(args);
@@ -33,7 +33,7 @@ public class MainDemo extends Application {
 
 		Flow flow = new Flow(MainController.class);
 		DefaultFlowContainer container = new DefaultFlowContainer();
-		flowContext = new ViewFlowContext();
+//		flowContext = new ViewFlowContext();
 		flowContext.register("Stage", stage);
 		flow.createHandler(flowContext).start(container);
 		
