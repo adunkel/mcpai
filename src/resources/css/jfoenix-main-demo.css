@@ -6,13 +6,13 @@
 	-fx-font-family: "Roboto";	
 }
 
-.side-menu{
+.side-menu {
 	-fx-padding: 20.0,10.0;
 	-fx-font-size: 15.0;
 	-fx-font-weight: NORMAL;
 	-fx-text-fill: #444;
 }
-.title-label{
+.title-label {
 	-fx-font-size: 16.0px;
 	-fx-padding	: 14.0px;
 	-fx-text-fill: rgba(0.0, 0.0, 0.0, 0.87);
@@ -47,7 +47,7 @@
 	-fx-background-color: rgba(0.0,0.0,0.0,0.1); 
 }
 
-.dialog-trigger{
+.dialog-trigger {
 	-fx-background-color: WHITE;
 	-fx-button-type:RAISED;
 	-fx-font-size: 14.0px;
@@ -74,7 +74,7 @@
 	-fx-padding: 10.0px 0.0 0.0 0.0 ;	
 	-fx-alignment: center-right ;
 }
-.dialog-accept{
+.dialog-accept {
 	-fx-text-fill: #03A9F4;
 	-fx-font-weight: BOLD; 	
 	-fx-padding: 0.7em 0.8em;
@@ -86,11 +86,11 @@
  *                                                                             *
  ******************************************************************************/
 
-.jfx-popup-overlay-pane{
+.jfx-popup-overlay-pane {
 	-fx-background-color: transparent ;
 }
 
-.jfx-popup-container{
+.jfx-popup-container {
 	-fx-background-color: WHITE;
 	-fx-pref-width:151.0px;
 }
@@ -117,27 +117,27 @@
  *                                                                             *
  ******************************************************************************/
 
-.icon{
+.icon {
 	-fx-text-fill: #FE774D;
 	-fx-padding: 10.0;
 	-fx-cursor: hand;
 }
 
-.icons-rippler{
+.icons-rippler {
 	-fx-rippler-fill: #FE774D;
 	-fx-mask-type: CIRCLE;
 }
 
-.icons-rippler1{
+.icons-rippler1 {
 	-fx-rippler-fill: #4285F4;
 	-fx-mask-type: CIRCLE;
 }
 
-.icons-rippler:hover{
+.icons-rippler:hover {
 	-fx-cursor: hand;
 }
 
-.animated-burgers .jfx-hamburger StackPane{
+.animated-burgers .jfx-hamburger StackPane {
 	-fx-background-color:#5264AE;
 	-fx-background-radius:4px;
 }
@@ -150,7 +150,7 @@
 	-fx-alignment: center;
 }
 
-.icons-badge Label{
+.icons-badge Label {
 	-fx-font-weight: BOLD;
 	-fx-font-size: 14.0px;
 	-fx-text-fill: WHITE;
@@ -164,13 +164,13 @@
 *                                                                              *
 *******************************************************************************/
 
-.jfx-hamburger{
+.jfx-hamburger {
 	-fx-padding: 10.0;
 	-fx-spacing: 4px;
 	-fx-cursor: hand;
 }
 
-.jfx-hamburger StackPane{
+.jfx-hamburger StackPane {
 	-fx-pref-width: 30px;
 	-fx-pref-height: 4px;
 	-fx-background-color: #FFF ;
@@ -183,7 +183,7 @@
  *                                                                             *
  ******************************************************************************/
 
-.jfx-tool-bar{
+.jfx-tool-bar {
 	-fx-font-size: 20.0;
 	-fx-font-weight: BOLD;
 	-fx-background-color: #5264AE;
@@ -197,14 +197,14 @@
 	-fx-padding: 0.0 10.0;
 }
 
-.jfx-tool-bar Label{
+.jfx-tool-bar Label {
 	-fx-text-fill: WHITE;
 }
 
-.jfx-tool-bar .jfx-options-burger{
+.jfx-tool-bar .jfx-options-burger {
 	-fx-padding: 22px;
 }
-.jfx-tool-bar .jfx-options-burger StackPane{
+.jfx-tool-bar .jfx-options-burger StackPane {
 	-fx-pref-width:4px;
 }
 
@@ -273,7 +273,7 @@
  *                                                                             *
  ******************************************************************************/
 
-.svg-slider .thumb{
+.svg-slider .thumb {
 	-fx-stroke : black;
 	-fx-fill : black;
 }
@@ -330,11 +330,11 @@
 *******************************************************************************/
 
 
-.custom-jfx-button-raised .jfx-rippler{
+.custom-jfx-button-raised .jfx-rippler {
 	-fx-rippler-fill: YELLOW;
 }
 
-.custom-jfx-button-raised  {
+.custom-jfx-button-raised {
 	-fx-padding: 0.7em 0.57em;
 	-fx-font-size: 14.0px;
 	-fx-button-type: RAISED;
@@ -349,22 +349,22 @@
 *                                                                              *
 *******************************************************************************/
 
-.jfx-check-box{
+.jfx-check-box {
     -fx-font-weight: BOLD;
 }
 
-.custom-jfx-check-box{
+.custom-jfx-check-box {
     -fx-checked-color: RED;
     -fx-unchecked-color: BLACK;
 }
 
-.custom-jfx-check-box-all-colored{
+.custom-jfx-check-box-all-colored {
 	 -fx-checked-color: #5264AE;
 	 -fx-unchecked-color: #5264AE;
 	 -fx-text-fill:#5264AE;
 }
 
-.custom-jfx-check-box-text-colored{
+.custom-jfx-check-box-text-colored {
 	-fx-text-fill:rgb(153.0,0.0,0.0);
 }
 
@@ -374,7 +374,7 @@
 *                                                                              *
 *******************************************************************************/
 
-.jfx-progress-bar{
+.jfx-progress-bar {
 	-fx-pref-width: 500.0;
 }
 
@@ -407,7 +407,7 @@
 *                                                                              *
 *******************************************************************************/
 
-.jfx-text-field, .jfx-password-field, .jfx-text-area{
+.jfx-text-field, .jfx-password-field, .jfx-text-area {
 	-fx-background-color: transparent ;
     -fx-font-weight: BOLD;
     -fx-prompt-text-fill: #808080;
@@ -423,16 +423,16 @@
 	-fx-unfocus-color: #D34336;
 }
 
-.jfx-text-field .errorLabel, .jfx-password-field .errorLabel, .jfx-text-area .errorLabel{
+.jfx-text-field .errorLabel, .jfx-password-field .errorLabel, .jfx-text-area .errorLabel {
 	-fx-text-fill : #D34336;
 	-fx-font-size: 0.75em;
 }
-.jfx-text-field .errorIcon, .jfx-password-field .errorIcon , .jfx-text-area .errorIcon{
+.jfx-text-field .errorIcon, .jfx-password-field .errorIcon , .jfx-text-area .errorIcon {
 	-fx-text-fill : #D34336;
 	-fx-font-size: 1.0em;
 }
 
-.jfx-text-area .viewport{
+.jfx-text-area .viewport {
 	-fx-background-color: #F4F4F4;
 }
 
@@ -459,7 +459,7 @@
 }
 
 .jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
-.jfx-list-cell:even:selected > .jfx-rippler > StackPane{ 
+.jfx-list-cell:even:selected > .jfx-rippler > StackPane {
 	-fx-background-color: rgba(0.0,0.0,255.0,0.2);
 }
 
@@ -472,11 +472,11 @@
 }
 
 .custom-jfx-list-view .jfx-list-cell:odd:selected > .jfx-rippler > StackPane,
-.custom-jfx-list-view .jfx-list-cell:even:selected > .jfx-rippler > StackPane{ 
+.custom-jfx-list-view .jfx-list-cell:even:selected > .jfx-rippler > StackPane {
 	-fx-background-color: rgba(255,0,0,0.2) ;
 }
 
-.custom-jfx-list-view{
+.custom-jfx-list-view {
 	-fx-background-insets: 0.0;
   	-fx-cell-horizontal-margin: 0.0;
   	-fx-cell-vertical-margin: 5.0;
@@ -489,7 +489,7 @@
 	-fx-rippler-fill : RED;
 }
 
-.custom-jfx-list-view1{
+.custom-jfx-list-view1 {
 	-fx-vertical-gap : 10.0;
   	-fx-pref-width: 150px;
   	-fx-background-color: transparent ;
@@ -500,7 +500,7 @@
 	-fx-padding: 0.0 10.0 0.0 5.0  ;
 	-fx-cursor: hand;
 }
-.custom-jfx-list-view-icon-container{
+.custom-jfx-list-view-icon-container {
 	-fx-pref-width:40px;
 }
 
