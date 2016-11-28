@@ -7,12 +7,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Gives simple distance, and driving time between two places (no driving
  * directions though); a place can be coordinates, a zip, an address, or any
  * string that would turn up a result in Google Maps. Uses Google Maps
  * Distance Matrix API.
+ *
+ * TODO: persist the responseCache, make it better
  */
 public final class RoadDistance {
 
@@ -26,6 +30,7 @@ public final class RoadDistance {
     private static final String BASE_ORIGINS_PARAM = "&origins="; // multiple origins separated by "|"
     private static final String ZIPS_SEPARATOR = "|"; // multiple zips separated by "|"
 
+    private static final Map<String, Response> responseCache = new HashMap<String, Response>();
     /**
      * Returns car distance in miles between two places as given by Google Maps.
      * @param origin eg 70806, msy, or houston, tx
@@ -33,11 +38,19 @@ public final class RoadDistance {
      * @return car distance in miles.
      */
     public double getRoadDistance(String origin, String destination) {
-        Response response = getResponse(origin, destination);
-        if (!response.status.toLowerCase().equals("ok")) {
-            printError("ERROR: getRoadDistance(" + origin + ", " + destination + ") response not 'ok'");
-            return -1;
+        StringBuilder sb = new StringBuilder();
+        String cacheKey = sb.append(origin.trim()).append(destination.trim()).toString();
+        Response response = responseCache.get(cacheKey);
+
+        if (response == null) {
+            response = getResponse(origin, destination);
+            if (!response.status.toLowerCase().equals("ok")) {
+                printError("ERROR: getRoadDistance(" + origin + ", " + destination + ") response not 'ok'");
+                return -1;
+            }
+            responseCache.put(cacheKey, response);
         }
+
         double distance = response.rows[0].elements[0].distance.getMiles();
         return distance;
     }
@@ -49,10 +62,17 @@ public final class RoadDistance {
      * @return car time in hours eg 33.5.
      */
     public double getRoadTime(String origin, String destination) {
-        Response response = getResponse(origin, destination);
-        if (!response.status.toLowerCase().equals("ok")) {
-            printError("ERROR: getRoadDistance(" + origin + ", " + destination + ") response not 'ok'");
-            return -1;
+        StringBuilder sb = new StringBuilder();
+        String cacheKey = sb.append(origin.trim()).append(destination.trim()).toString();
+        Response response = responseCache.get(cacheKey);
+
+        if (response == null) {
+            response = getResponse(origin, destination);
+            if (!response.status.toLowerCase().equals("ok")) {
+                printError("ERROR: getRoadDistance(" + origin + ", " + destination + ") response not 'ok'");
+                return -1;
+            }
+            responseCache.put(cacheKey, response);
         }
         double roadTime = response.rows[0].elements[0].duration.getDuration();
         return roadTime;
@@ -72,7 +92,10 @@ public final class RoadDistance {
         return sb.toString();
     }
 
+    public static int apiRequestsCounter = 0;
+
     private Response getResponse(String origin, String destination) {
+        apiRequestsCounter++;
         String urlString = buildUrl(origin, destination);
         URL url;
         HttpURLConnection conn;

@@ -1,5 +1,8 @@
 package models.places;
 
+/**
+ * TODO: see 00notes/location-etc/
+ */
 public class Location {
     String locationString;
 
@@ -16,6 +19,8 @@ public class Location {
 
     public String getLocationString() { return locationString; }
     public Location setLocationString(String locationString) {
+        if (locationString.equals(this.locationString))
+            return this;
         this.locationString = locationString;
         return this;
     }

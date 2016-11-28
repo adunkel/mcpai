@@ -35,6 +35,8 @@ public final class MainModel {
         setTestString(testString);
     }
 
+    private String searchStrings;
+
     public MainModel calculateDrive() {
         totalDriveTime = RD.getRoadTime(
               startLocation.getLocationString(),
